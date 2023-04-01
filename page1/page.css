@@ -10,9 +10,9 @@
   }
   
   .nav {
-    height: 60px;
+    height: 7vh;
     width: 100%;
-    background-color: #4d4d4d;
+    /* background-color: #4d4d4d; */
     position: relative;
     text-align: center;
     justify-content: center;
@@ -26,16 +26,25 @@
   
   .nav > .nav-header {
     display: inline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
 .nav-title {
+  
+    width: 4vw;
     display: inline-block;
-    font-size: 22px;
-    color: #fff;
+    font-size: 2vw;
+    color:black;
     padding-right: 30%;
+    margin-top:auto;
+    /* padding-top: 4vh; */
     /* padding: 10px 10px 10px 10px; */
     /* margin-right: 20%; */
   }
+  
+  
   
   .nav > .nav-btn {
     display: none;
@@ -48,6 +57,7 @@
     justify-content: center;
     font-size: 18px;
     align-items: center;
+    padding-bottom: 0vh;
     
   }
   .nav-links > b{
@@ -58,7 +68,7 @@
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #efefef;
+    color: black;
   }
   
   .nav > .nav-links > a:hover {
@@ -75,7 +85,7 @@
     width: 9vw;
     height: 4vh;
     background: transparent;
-    border: 2px solid white;
+    border: 4px solid #209FA8;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -87,8 +97,8 @@
     
 }
 .btnLogin-popup:hover{
-    background: white;
-    color: black;
+    background: #209FA8;
+    color: white;
 
 }
   
