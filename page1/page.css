@@ -60,7 +60,7 @@
     padding-bottom: 0vh;
     
   }
-  .nav-links > b{
+  .nav-links > a{
     padding-left: 11vw;
   }
  
@@ -161,7 +161,7 @@
 .home-btn{
   padding-top: 10vh;
 }
-.home-btn > c {
+.home-btn > .btncreateaccount-popup {
   padding-right: 1vw;
 
 }
@@ -178,10 +178,10 @@
 .media-txt{
 display: none;
 }
-.media-home-txt > c {
+.media-home-txt > .btncreateaccount-popup {
 display: none;
 }
-.media-home-txt > b{
+.media-home-txt > .btnLogin-popup {
   display: none;
 }
 
@@ -291,7 +291,7 @@ display: none;
       margin-top: 6vh;
       
     }
-    .nav-links > b{
+    .nav-links > .btnLogin-popup{
       padding-left: 0vw;
     }
     
@@ -308,7 +308,7 @@ display: none;
   .txt{
   display: none;
   }
-  .home-txt > c {
+  .home-txt > .btncreateaccount-popup {
   display: none;
   }
 
@@ -350,10 +350,10 @@ display: none;
     align-items: center;
     padding-bottom: 25vw;
   }
-  .media-home-btn > c {
+  .media-home-btn > .btncreateaccount-popup {
     padding-right: 1vw;
   }
-  .media-home-btn > b{
+  .media-home-btn > .btnLogin-popup{
     
   }
   }
@@ -402,7 +402,8 @@ display: none;
     background-color: white;
     border-radius: 14px;
     font-size: 1.9vh;
-    font-size: auto;
+    
+   
     display: flex;
     align-self: stretch;
     text-align: center;
@@ -603,5 +604,19 @@ display: none;
     }
     .swiper-navBtn{
       display: none;
+    }
+    .feature{
+      font-size: 3.3vw;
+    }
+  }
+  @media (min-width:768px) and (max-width:1000px){
+    .feature{
+      font-size: 1.8vw;
+    }
+  }
+
+  @media (min-width:1000px) and (max-width:1300px){
+    .feature{
+      font-size: 1.4vw;
     }
   }
