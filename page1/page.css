@@ -1,83 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
   
   body {
     margin: 0px;
     font-family: 'segoe ui';
   }
-  
-  .nav {
-    height: 7vh;
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1bc1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: white;
+  background: #209FA8;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+li:nth-child(6) a {
+  border: 2px solid #209FA8;
+}
+
+li:nth-child(7) a {
+  border: 2px solid #209FA8;
+}
+
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+    z-index: 999;
+  }
+}
+@media (max-width: 920px) {
+  nav{
+    z-index: 999;
+  }
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
     width: 100%;
-    /* background-color: #4d4d4d; */
-    position: relative;
     text-align: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(100deg ,rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* border: 1px solid rgba(0, 0,0, 0.4); */
-    /* box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 1); */
+    display: block;
+    transition: all 0.3s ease;
   }
-  
-  .nav > .nav-header {
-    display: inline;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  #click:checked ~ ul{
+    left: 0;
   }
-  
-.nav-title {
-  
-    width: 4vw;
-    display: inline-block;
-    font-size: 2vw;
-    color:black;
-    padding-right: 24vw;
-    margin-top:auto;
-    /* padding-top: 4vh; */
-    /* padding: 10px 10px 10px 10px; */
-    /* margin-right: 20%; */
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
   }
-  
-  
-  
-  .nav > .nav-btn {
-    display: none;
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: transparent;
+    color: #209FA8;
+  }
+  li:nth-child(6) a.active,
+  li:nth-child(6) a:hover{
   
-  .nav-links {
-    display: flex;
-    display: inline;
-    text-align: center;
-    justify-content: center;
-    font-size: 18px;
-    align-items: center;
-    padding-bottom: 0vh;
-    
-  }
-  .nav-links > a{
-    padding-left: 11vw;
-  }
- 
-  .nav > .nav-links > a {
-    display: inline-block;
-    padding: 13px 10px 13px 10px;
-    text-decoration: none;
-    color: black;
-  }
+    background: #209FA8;
+    color: white;
   
-  .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+   
   }
-  
-  .nav > #nav-check {
-    display: none;
+  li:nth-child(7) a.active,
+  li:nth-child(7) a:hover {
+    background: #209FA8;
+    color: white;
   }
+}
+
+
+
+
 
   .btncreateaccount-popup{
     width: 9vw;
@@ -195,6 +255,7 @@ display: none;
   align-items: center;
   justify-content: center;
   background-color: white;
+
 }
   @media(min-width:800px) and ( max-width:1500px){
     .home{
@@ -207,93 +268,6 @@ display: none;
   
   @media (max-width:800px) {
 
-    .nav-title{
-      display: inline-block;
-      padding-right: 70vw;
-      padding-top: 0.8vh;
-    }
-    .nav{
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      height: 6vh;
-      
-    }
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 10vw;
-      height: 10vw;
-      padding-top: 1.4vh;
-      padding-right: 15vw;
-      
-      
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      /* background-color: rgba(0, 0, 0, 0.3); */
-      
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 1.2vh;
-      border-top: 2px solid #eee;
-    }
-    /* .nav-links > b{
-     padding: 5vw;
-    } */
-    .nav > .nav-links {
-      position: absolute;
-      z-index: 1;
-      display: block;
-      width: 40vw;
-      height: 100vh;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      background-color: #333;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      right: 0px;
-      margin-top: 0;
-      background: linear-gradient(100deg ,rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 1);
-      
-    }
-    
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-      padding: 4vw;
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    }
-    .btnLogin-popup{
-        width: 28vw;
-        height: 7vh;
-        margin-top: 6vh;
-    }
-    .btncreateaccount-popup{
-      width: 28vw;
-      height: 7vh;
-      margin-top: 6vh;
-      
-    }
-    .nav-links > .btnLogin-popup{
-      padding-left: 0vw;
-    }
     
   .home{
     
@@ -619,4 +593,27 @@ display: none;
     .feature{
       font-size: 1.4vw;
     }
+  }
+
+
+  .about{
+    background-image: url(pagebg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    
+
+  }
+  .feedback{
+    background-image: url(feaedbackbg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .contact{
+    background-color: #F4F5FF;
+    height: 100vh;
+    width: 100%;
   }
