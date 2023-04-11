@@ -137,13 +137,24 @@
       background: #209FA8;
       color: white;
     }
+    
+    .page{
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  @media(min-width: 920px) {
+    .page{
+      margin-left: 25vw;
+      margin-right: 25vw;
+    }
+
+
   }
   
 .page{
-  margin-right: 25vw;
-  margin-left: 25vw;
-  /* height:  auto;
-  width: auto; */
+  /* margin-right: 25vw;
+  margin-left: 25vw; */
   background-image: url(page1bg.jpg);
   background-repeat: repeat-y;
   background-size: cover;
@@ -153,7 +164,6 @@
 .rent{
   box-sizing: border-box;
   border-radius : 0px 0px 25px 25px;
-  /* background-color: #f5f5f7; */
   background-color: rgba(128, 128, 128, 0.354);
   
 }
@@ -304,3 +314,56 @@
   background-color:  rgba(128, 128, 128, 0.354);
   border-radius : 25px 25px 0px 0px;
 }
+
+@media(min-width:100px) and ( max-width:920px){
+  .card-img{
+    height: 30vh;
+  }
+  .heading{
+    padding-top: 2vw;
+    font-size: 1.6em;
+  }
+  .item-cost{
+    margin-top: 5vw;
+  }
+  .cost-content {
+    font-size: 5vw;
+    padding: 3vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin: 3vw;
+    margin-right: auto;
+    line-height: 2vw;
+    align-items: center;
+  }
+  .icons{
+    line-height: 7.5vw;
+  }
+  .item-cost  .electricity-icon{
+    padding-top: 0.6vw;
+
+  }
+  .item-cost  .water-icon{
+    padding-top: 0.2vw;
+
+  }
+  .item-cost  .penalty-icon{
+    padding-top: 2.7vw;
+
+  }
+  .item-cost  .total-icon , .total-cost{
+
+    font-size: 7vw;
+    padding-top: 3vw;
+  }
+  .name{
+    line-height: 8.1vw;
+  }
+  .rent-btn{
+    font-size: 1em;
+  }
+  .lastrent-btn{
+    font-size: 1em;
+  }
+}
+
